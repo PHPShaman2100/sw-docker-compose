@@ -1,0 +1,22 @@
+{
+  "name": "swoole-fr/deploy",
+  "description": "Swoole Deploy",
+  "type": "project",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "App\\Deploy\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php-64bit": ">=8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "doctrine/migrations": "^3.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

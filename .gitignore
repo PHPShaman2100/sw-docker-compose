@@ -1,0 +1,6 @@
+.idea/
+www/
+/docker/rabbitmq/tls-gen/
+vendor/
+composer.lock
+logs
