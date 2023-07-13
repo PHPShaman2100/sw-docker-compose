@@ -8,9 +8,9 @@
       "App\\Deploy\\": "src/"
     }
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require": {
-    "php-64bit": ">=8.0",
+    "php-64bit": ">=8.1",
     "ext-curl": "*",
     "ext-json": "*",
     "doctrine/migrations": "^3.2"

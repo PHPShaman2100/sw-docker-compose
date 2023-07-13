@@ -29,7 +29,8 @@ services:
       - mysql
     volumes:
       - ./logs/supervisor/gateway:/var/log/supervisor
-      - ../project/gateway/:/var/www/gateway
+      - ../project/framwork:/var/www/framwork
+      - ../project/gateway:/var/www/gateway
       - ./supervisor/gateway.conf:/etc/supervisor/conf.d/gateway.conf
       - ./docker/php8_2-service/php.ini:/usr/local/etc/php/conf.d/php.ini
     environment:

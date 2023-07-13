@@ -48,6 +48,10 @@ RUN apt-get update \
              gcc \
              libmemcached-dev \
              libssl-dev \
+    && pecl install swoole \
+    && docker-php-ext-enable swoole \
+    && pecl install openswoole \
+    && docker-php-ext-enable openswoole \
     && pecl install redis \
     && docker-php-ext-enable redis \
     && pecl install apcu \
