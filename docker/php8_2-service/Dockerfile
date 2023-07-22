@@ -1,4 +1,4 @@
-FROM php:8.2.2-cli
+FROM php:8.2.8-cli
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM            xterm-color
@@ -48,8 +48,6 @@ RUN apt-get update \
              gcc \
              libmemcached-dev \
              libssl-dev \
-    && pecl install swoole \
-    && docker-php-ext-enable swoole \
     && pecl install openswoole \
     && docker-php-ext-enable openswoole \
     && pecl install redis \
@@ -68,12 +66,7 @@ RUN docker-php-ext-configure intl --enable-intl && \
         intl iconv mbstring \
         zip pcntl \
         exif opcache \
-	&& docker-php-ext-enable opcache && \
-    install-swoole.sh 5.0.2 \
-            --enable-mysqlnd      \
-            --enable-swoole-pgsql \
-            --enable-openssl      \
-            --enable-sockets --enable-swoole-curl
+	&& docker-php-ext-enable opcache
 
 
 RUN docker-php-ext-install sockets

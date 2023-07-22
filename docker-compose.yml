@@ -23,12 +23,14 @@ services:
     image: sf_gateway:0.1
     ports:
       - "8800:8800"
+      - "9501:9501"
     links:
       - mysql
     depends_on:
       - mysql
     volumes:
       - ./logs/supervisor/gateway:/var/log/supervisor
+      - ./logs/supervisor/gateway/swoole:/var/log/supervisor/swoole
       - ../project/framwork:/var/www/framwork
       - ../project/gateway:/var/www/gateway
       - ./supervisor/gateway.conf:/etc/supervisor/conf.d/gateway.conf
